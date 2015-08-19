@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @placement.name %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @placement.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @placement.end_date %>
+</p>
+
+<p>
+  <strong>Impressions:</strong>
+  <%= @placement.impressions %>
+</p>
+
+<p>
+  <strong>Cpm cost:</strong>
+  <%= @placement.cpm_cost %>
+</p>
+
+<p>
+  <strong>Cpc cost:</strong>
+  <%= @placement.cpc_cost %>
+</p>
+
+<p>
+  <strong>Total cost:</strong>
+  <%= @placement.total_cost %>
+</p>
+
+<%= link_to 'Edit', edit_placement_path(@placement) %> |
+<%= link_to 'Back', placements_path %>

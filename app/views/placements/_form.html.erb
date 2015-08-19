@@ -1,0 +1,45 @@
+<%= form_for(@placement) do |f| %>
+  <% if @placement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@placement.errors.count, "error") %> prohibited this placement from being saved:</h2>
+
+      <ul>
+      <% @placement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.datetime_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.datetime_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :impressions %><br>
+    <%= f.number_field :impressions %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_cost %><br>
+    <%= f.number_field :cpm_cost %>
+  </div>
+  <div class="field">
+    <%= f.label :cpc_cost %><br>
+    <%= f.number_field :cpc_cost %>
+  </div>
+  <div class="field">
+    <%= f.label :total_cost %><br>
+    <%= f.number_field :total_cost %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

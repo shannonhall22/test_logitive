@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cost Structures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cost_structures.each do |cost_structure| %>
+      <tr>
+        <td><%= cost_structure.name %></td>
+        <td><%= link_to 'Show', cost_structure %></td>
+        <td><%= link_to 'Edit', edit_cost_structure_path(cost_structure) %></td>
+        <td><%= link_to 'Destroy', cost_structure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cost structure', new_cost_structure_path %>
