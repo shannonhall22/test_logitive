@@ -9,10 +9,7 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-.bg-dark-gray{
-  background-color: #333333;
-  width: 100%;
-}
+
 
 body {
   margin: 0;
